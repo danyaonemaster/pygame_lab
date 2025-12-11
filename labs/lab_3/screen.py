@@ -9,7 +9,6 @@ screen = pygame.display.set_mode((W, H))
 clock = pygame.time.Clock()
 pygame.display.set_caption("Sailor Moon Collage (Perfect Center)")
 
-# 📌 ЛОКАЛЬНЫЕ ФАЙЛЫ
 IMAGE_FILES = [
     "images/img.png",
     "images/HD-wallpaper-sailor-moon-usagi-tsukino-full-moon-serena-flowers-bunny.jpg",
@@ -29,12 +28,11 @@ for path in IMAGE_FILES:
         img = pygame.transform.smoothscale(img, (int(w*scale), int(h*scale)))
 
         surfaces.append(img)
-        print("Загружено:", path)
+        print()
     except:
-        print("⚠ Не найден файл:", path)
+        print()
 
 if not surfaces:
-    print("❗ Нет изображений. Помести их в папку images/")
     pygame.quit()
     raise SystemExit
 
